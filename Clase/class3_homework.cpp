@@ -32,7 +32,7 @@ class EMPLEADO:public UNET{
 		float sueldo;
 };
 
-//Diseño de los métodos UNET///////////////////////////////////////////////////////
+//DiseÃ±o de los mÃ©todos UNET///////////////////////////////////////////////////////
 
 void UNET::leer(){
 	cout<<"Dar cedula:"<<endl;
@@ -47,7 +47,7 @@ void UNET::mostrar(){
 	cout<<ci<<"\t"<<nombre<<"\t"<<apellido<<"\t\t";
 }
 
-//Diseño de los metodos ESTUDIANTE//////////////////////////////////////////////
+//DiseÃ±o de los metodos ESTUDIANTE//////////////////////////////////////////////
 
 void ESTUDIANTE::leer_e(){
 	leer();
