@@ -17,7 +17,7 @@ class EMPLEADO
 		float sueldo;
 };
 
-//Diseño de los métodos de la clase
+//DiseÃ±o de los mÃ©todos de la clase
 
 void EMPLEADO::leer(int e)
 {
