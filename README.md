@@ -1,2 +1,5 @@
-# clases_compuUNET
-Acá guardo todo lo que hago en las clases de computación 2
+# Computing II - Files from class
+This is the place where i store code and programs for my class of computing II
+```
+cout << "Hello world cliche"
+```
