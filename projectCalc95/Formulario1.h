@@ -73,10 +73,15 @@ __published:	// IDE-managed Components
 	void __fastcall BmmClick(TObject *Sender);
 private:	// User declarations
 public:
-    void e1Clean();
-    int pointHunt();
+    //Methods
+	void e1Clean();
     void calc();
+    void pressNum(char);
+    void cleanErr();
+	int pointHunt();
+	//Atributes
 	double n1,m;
+    int error;
     char op;	// User declarations
     __fastcall TForm1(TComponent* Owner);
 };

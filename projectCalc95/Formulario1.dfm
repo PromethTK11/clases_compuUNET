@@ -1,12 +1,12 @@
 object Form1: TForm1
-  Left = 732
-  Top = 191
+  Left = 183
+  Top = 317
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Calculator'
-  ClientHeight = 235
+  ClientHeight = 234
   ClientWidth = 259
-  Color = clMoneyGreen
+  Color = clSkyBlue
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindow
   Font.Height = -13

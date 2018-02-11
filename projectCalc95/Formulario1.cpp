@@ -14,16 +14,40 @@ __fastcall TForm1::TForm1(TComponent* Owner)
     : TForm(Owner)
 {
 }
+
 //---------------------------------------------------------------------------
-//Cleaning function
+//Init
+
+void __fastcall TForm1::FormCreate(TObject *Sender)
+{
+	op='0';
+    n1=0;
+    m=0;
+}
+//---------------------------------------------------------------------------
+//Cleaning functions
 
 void TForm1::e1Clean()
 {
 	E1->Clear();
     E1->Text="0";
     E1->SetFocus();
+    E1->ReadOnly=false;
+    error=0;
+}
+
+void TForm1::cleanErr(){
+	if(error==1){
+        BCE->Click();
+    }
 }
 //---------------------------------------------------------------------------
+//Num input and calc functions
+
+void TForm1::pressNum(char num){
+    cleanErr();
+    E1->Text=E1->Text + num;
+}
 
 int TForm1::pointHunt()
 {
@@ -33,8 +57,6 @@ int TForm1::pointHunt()
     return 0;
 }
 
-//---------------------------------------------------------------------------
-
 void TForm1::calc(){
 	if(op!='0'&&!(E1->Text.ToDouble()==1)){
 			if (op=='+')E1->Text=n1+E1->Text.ToDouble();
@@ -42,22 +64,17 @@ void TForm1::calc(){
         	if (op=='*')E1->Text=n1*E1->Text.ToDouble();
         	if (op=='/'){
             	if(E1->Text.ToDouble()!=0)E1->Text=(double)n1/E1->Text.ToDouble();
-                if(E1->Text.ToDouble()==0)E1->Text="MATH ERROR";
+                if(E1->Text.ToDouble()==0){
+                E1->Text="MATH ERROR";
+                E1->ReadOnly=true;
+                error=1;
+                }
             }
     }
     op='0';
 }
-
 //---------------------------------------------------------------------------
-
-
-void __fastcall TForm1::BeqClick(TObject *Sender)
-{
-	calc();
-    L1->Caption="";
-}
-//---------------------------------------------------------------------------
-
+//Keyboard press function
 
 void __fastcall TForm1::E1KeyPress(TObject *Sender, char &Key)
 {
@@ -75,6 +92,14 @@ void __fastcall TForm1::E1KeyPress(TObject *Sender, char &Key)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::BeqClick(TObject *Sender)
+{
+	calc();
+    L1->Caption="";
+}
+//---------------------------------------------------------------------------
+
+
 void __fastcall TForm1::BCEClick(TObject *Sender)
 {
 	e1Clean();
@@ -89,157 +114,148 @@ void __fastcall TForm1::BCClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-
-
-
 void __fastcall TForm1::BpClick(TObject *Sender)
 {
-    if (op=='s')L1->Caption=L1->Caption+" + ";
-    L1->Caption=L1->Caption+E1->Text + " + ";
-    calc();
-	n1=E1->Text.ToDouble();
-	e1Clean();
-    op='+';
-    E1->SetFocus();
+    if (error!=1){
+   		L1->Caption=L1->Caption+E1->Text + " + ";
+    	calc();
+		n1=E1->Text.ToDouble();
+		e1Clean();
+	    op='+';
+    	E1->SetFocus();
+    }
 }
 //---------------------------------------------------------------------------
-
-
-
-void __fastcall TForm1::FormCreate(TObject *Sender)
-{
-	op='0';
-    n1=0;
-}
-//---------------------------------------------------------------------------
-
 
 void __fastcall TForm1::BminClick(TObject *Sender)
 {
 
-	L1->Caption=L1->Caption+E1->Text + " - ";
-    calc();
-	n1=E1->Text.ToDouble();
-	e1Clean();
-    op='-';
-    E1->SetFocus();
+	if(error!=1){
+		L1->Caption=L1->Caption+E1->Text + " - ";
+    	calc();
+		n1=E1->Text.ToDouble();
+		e1Clean();
+	    op='-';
+    	E1->SetFocus();
+    }
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::BmultClick(TObject *Sender)
 {
-	L1->Caption=L1->Caption+E1->Text + " * ";
-    calc();
-    n1=E1->Text.ToDouble();
-	e1Clean();
-    op='*';
-   	E1->SetFocus();
+    if(error!=1){
+		L1->Caption=L1->Caption+E1->Text + " * ";
+    	calc();
+	    n1=E1->Text.ToDouble();
+		e1Clean();
+	    op='*';
+   		E1->SetFocus();
+    }
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::BdivClick(TObject *Sender)
 {
-	L1->Caption=L1->Caption+E1->Text + " / ";
-    calc();
-	n1=E1->Text.ToDouble();
-	e1Clean();
-    op='/';
-    E1->SetFocus();
+    if (error!=1){
+		L1->Caption=L1->Caption+E1->Text + " / ";
+	    calc();
+		n1=E1->Text.ToDouble();
+		e1Clean();
+    	op='/';
+	    E1->SetFocus();
+    }
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B1Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "1";
+	pressNum('1');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B2Click(TObject *Sender)
 {
-    E1->Text = E1->Text + "2";
+    pressNum('2');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B3Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "3";	
+	pressNum('3');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B4Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "4";	
+	pressNum('4');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B5Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "5";	
+	pressNum('5');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B6Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "6";	
+	pressNum('6');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B7Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "7";	
+	pressNum('7');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B8Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "8";	
+	pressNum('8');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B9Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "9";
+	pressNum('9');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::B0Click(TObject *Sender)
 {
-	E1->Text = E1->Text + "0";
+	pressNum('0');
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::BsqClick(TObject *Sender)
 {
-
-    if (E1->Text.ToDouble()>=0){
-    	L1->Caption=L1->Caption + "sqrt(";
-	    L1->Caption=L1->Caption+E1->Text;
-    	L1->Caption=L1->Caption+")";
-        E1->Text=AnsiString(sqrt(E1->Text.ToDouble()));
-        op='s';
-    }
-    if (E1->Text.ToDouble()<0){
-    	L1->Caption="MATH ERROR";
+    if(error!=1){
+    	if (E1->Text.ToDouble()>=0){
+        	E1->Text=AnsiString(sqrt(E1->Text.ToDouble()));
+	    }
+    	if (E1->Text.ToDouble()<0){
+    		E1->Text="MATH ERROR";
+	        E1->ReadOnly=true;
+    	    error=1;
+	    }
     }
 }
 //---------------------------------------------------------------------------
-
 
 void __fastcall TForm1::BreciClick(TObject *Sender)
 {
-    if (E1->Text.ToDouble()==0){
-    	L1->Caption="MATH ERROR";
-    }
-	if (E1->Text.ToDouble()!=0){
-    	E1->Text=AnsiString(1/E1->Text.ToDouble());
-		L1->Caption=L1->Caption + "reciproc(";
-	    L1->Caption=L1->Caption+E1->Text;
-    	L1->Caption=L1->Caption+")";
-        op='s';
+    if (error!=1){
+    	if (E1->Text.ToDouble()!=0){
+    		E1->Text=AnsiString(1/E1->Text.ToDouble());
+	    }
+    	if (E1->Text.ToDouble()==0){
+    		E1->Text="MATH ERROR";
+	        E1->ReadOnly=true;
+    	    error=1;
+	    }
     }
 }
 //---------------------------------------------------------------------------
-
 
 void __fastcall TForm1::BBackClick(TObject *Sender)
 {
@@ -249,11 +265,13 @@ void __fastcall TForm1::BBackClick(TObject *Sender)
 
 void __fastcall TForm1::BpmClick(TObject *Sender)
 {
-	if(E1->Text[1]=='-'){
-        E1->Text=E1->Text.Delete(1,1);
-    }
-    else{
-        E1->Text="-"+E1->Text;
+    if (error!=1){
+		if(E1->Text[1]=='-'){
+        	E1->Text=E1->Text.Delete(1,1);
+	    }
+    	else{
+        	E1->Text="-"+E1->Text;
+	    }
     }
 }
 //---------------------------------------------------------------------------
@@ -266,7 +284,7 @@ void __fastcall TForm1::BMSClick(TObject *Sender)
 
 void __fastcall TForm1::BMRClick(TObject *Sender)
 {
-	E1->Text=m;
+	if(error!=1)E1->Text=m;
 }
 //---------------------------------------------------------------------------
 
@@ -291,9 +309,9 @@ void __fastcall TForm1::BpoiClick(TObject *Sender)
 
 void __fastcall TForm1::BporClick(TObject *Sender)
 {
-	E1->Text = AnsiString(n1*(E1->Text.ToDouble()/100));
-    L1->Caption = L1->Caption + E1->Text;
-    op='s';
+
+	if (error!=1)
+    	E1->Text = AnsiString(n1*(E1->Text.ToDouble()/100));
 }
 //---------------------------------------------------------------------------
 
