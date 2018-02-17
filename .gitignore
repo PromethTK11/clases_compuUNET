@@ -1,0 +1,8 @@
+*.tds
+*.exe
+*.obj
+*.~cpp
+*.~dfm
+*.~h
+*.~ddp
+*.~bpr
