@@ -23,10 +23,17 @@ __published:	// IDE-managed Components
 	TMemo *M1;
 	TLabel *L1;
 	TButton *B1;
+	TMenuItem *DatosdeUbicacion1;
+	TMenuItem *DatosdeTalla1;
+	TLabel *L2;
+	TEdit *E1;
+	TButton *B2;
 	void __fastcall Cargar1Click(TObject *Sender);
 	void __fastcall Acercade1Click(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall B1Click(TObject *Sender);
+	void __fastcall DatosdeUbicacion1Click(TObject *Sender);
+	void __fastcall DatosdeTalla1Click(TObject *Sender);
 private:	// User declarations
 public:
 	int cPer;		// User declarations

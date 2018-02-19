@@ -7,6 +7,7 @@
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
+#include <ExtCtrls.hpp>
 //---------------------------------------------------------------------------
 class TF3 : public TForm
 {
@@ -24,6 +25,7 @@ __published:	// IDE-managed Components
 	TLabel *L2;
 	TEdit *E2;
 	TEdit *E1;
+	TLabeledEdit *LE1;
 	void __fastcall E1KeyPress(TObject *Sender, char &Key);
 	void __fastcall B2Click(TObject *Sender);
 	void __fastcall B1Click(TObject *Sender);

@@ -1,6 +1,6 @@
 object F2: TF2
-  Left = 389
-  Top = 195
+  Left = 541
+  Top = 57
   Width = 358
   Height = 322
   Caption = 'Datos Personales'
@@ -174,7 +174,7 @@ object F2: TF2
     Caption = 'Nacionalidad:'
   end
   object L3: TLabel
-    Left = 192
+    Left = 96
     Top = 80
     Width = 98
     Height = 13
@@ -202,15 +202,15 @@ object F2: TF2
     Caption = 'Fecha de Nacimiento:'
   end
   object L9: TLabel
-    Left = 168
+    Left = 104
     Top = 176
     Width = 64
     Height = 13
     Caption = 'Ciudad Natal:'
   end
   object L8: TLabel
-    Left = 104
-    Top = 176
+    Left = 272
+    Top = 80
     Width = 27
     Height = 13
     Caption = 'Sexo:'
@@ -225,20 +225,21 @@ object F2: TF2
   object CB1: TComboBox
     Left = 24
     Top = 96
-    Width = 145
+    Width = 49
     Height = 21
     ItemHeight = 13
     TabOrder = 0
     Text = 'V'
+    OnKeyPress = CB1KeyPress
     Items.Strings = (
       'V'
       'E'
       'P')
   end
   object E1: TEdit
-    Left = 192
+    Left = 96
     Top = 96
-    Width = 121
+    Width = 153
     Height = 21
     AutoSize = False
     MaxLength = 9
@@ -263,6 +264,7 @@ object F2: TF2
     ItemHeight = 13
     TabOrder = 3
     Text = 'A+'
+    OnKeyPress = CB1KeyPress
     Items.Strings = (
       'A+'
       'A-'
@@ -273,23 +275,12 @@ object F2: TF2
       'O+'
       'O-')
   end
-  object E3: TEdit
-    Left = 152
-    Top = 144
-    Width = 161
-    Height = 21
-    MaxLength = 10
-    TabOrder = 4
-    Text = 'DD/MM/AAAA'
-    OnClick = E3Click
-    OnKeyPress = E3KeyPress
-  end
   object E4: TEdit
-    Left = 168
+    Left = 104
     Top = 192
-    Width = 145
+    Width = 209
     Height = 21
-    TabOrder = 5
+    TabOrder = 4
     OnKeyPress = E2KeyPress
   end
   object CB3: TComboBox
@@ -298,8 +289,9 @@ object F2: TF2
     Width = 57
     Height = 21
     ItemHeight = 13
-    TabOrder = 6
+    TabOrder = 5
     Text = 'S'
+    OnKeyPress = CB1KeyPress
     Items.Strings = (
       'S'
       'C'
@@ -307,12 +299,12 @@ object F2: TF2
       'D')
   end
   object CB4: TComboBox
-    Left = 104
-    Top = 192
+    Left = 272
+    Top = 96
     Width = 41
     Height = 21
     ItemHeight = 13
-    TabOrder = 7
+    TabOrder = 6
     Text = 'M'
     Items.Strings = (
       'M'
@@ -324,7 +316,7 @@ object F2: TF2
     Width = 75
     Height = 25
     Caption = 'Guardar'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = B1Click
   end
   object B2: TButton
@@ -333,7 +325,21 @@ object F2: TF2
     Width = 75
     Height = 25
     Caption = 'Volver'
-    TabOrder = 9
+    TabOrder = 8
     OnClick = B2Click
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 152
+    Top = 144
+    Width = 161
+    Height = 21
+    CalAlignment = dtaLeft
+    Date = 43150.6050941319
+    Time = 43150.6050941319
+    DateFormat = dfShort
+    DateMode = dmComboBox
+    Kind = dtkDate
+    ParseInput = False
+    TabOrder = 9
   end
 end

@@ -2,7 +2,7 @@ object F4: TF4
   Left = 351
   Top = 220
   Width = 459
-  Height = 273
+  Height = 307
   Caption = 'Datos de ubicacion'
   Color = clInactiveCaption
   Font.Charset = DEFAULT_CHARSET
@@ -168,7 +168,7 @@ object F4: TF4
   end
   object B1: TButton
     Left = 32
-    Top = 192
+    Top = 224
     Width = 75
     Height = 25
     Caption = 'Guardar'
@@ -177,7 +177,7 @@ object F4: TF4
   end
   object B2: TButton
     Left = 336
-    Top = 192
+    Top = 224
     Width = 75
     Height = 25
     Caption = 'Volver'
@@ -186,7 +186,7 @@ object F4: TF4
   end
   object LE1: TLabeledEdit
     Left = 24
-    Top = 48
+    Top = 88
     Width = 121
     Height = 21
     EditLabel.Width = 23
@@ -199,7 +199,7 @@ object F4: TF4
   end
   object LE2: TLabeledEdit
     Left = 160
-    Top = 48
+    Top = 88
     Width = 121
     Height = 21
     EditLabel.Width = 36
@@ -212,7 +212,7 @@ object F4: TF4
   end
   object LE3: TLabeledEdit
     Left = 296
-    Top = 48
+    Top = 88
     Width = 121
     Height = 21
     EditLabel.Width = 36
@@ -225,7 +225,7 @@ object F4: TF4
   end
   object LE4: TLabeledEdit
     Left = 24
-    Top = 96
+    Top = 136
     Width = 185
     Height = 21
     EditLabel.Width = 77
@@ -237,7 +237,7 @@ object F4: TF4
   end
   object LE5: TLabeledEdit
     Left = 232
-    Top = 96
+    Top = 136
     Width = 185
     Height = 21
     EditLabel.Width = 111
@@ -249,8 +249,8 @@ object F4: TF4
   end
   object LE6: TLabeledEdit
     Left = 24
-    Top = 144
-    Width = 81
+    Top = 184
+    Width = 121
     Height = 21
     EditLabel.Width = 64
     EditLabel.Height = 13
@@ -260,9 +260,9 @@ object F4: TF4
     TabOrder = 7
   end
   object LE9: TLabeledEdit
-    Left = 320
-    Top = 144
-    Width = 97
+    Left = 232
+    Top = 40
+    Width = 185
     Height = 21
     EditLabel.Width = 90
     EditLabel.Height = 13
@@ -273,9 +273,9 @@ object F4: TF4
     OnKeyPress = LE9KeyPress
   end
   object LE7: TLabeledEdit
-    Left = 112
-    Top = 144
-    Width = 97
+    Left = 296
+    Top = 184
+    Width = 121
     Height = 21
     EditLabel.Width = 99
     EditLabel.Height = 13
@@ -286,9 +286,9 @@ object F4: TF4
     OnKeyPress = LE7KeyPress
   end
   object LE8: TLabeledEdit
-    Left = 216
-    Top = 144
-    Width = 97
+    Left = 160
+    Top = 184
+    Width = 121
     Height = 21
     EditLabel.Width = 80
     EditLabel.Height = 13
@@ -297,5 +297,17 @@ object F4: TF4
     LabelSpacing = 3
     TabOrder = 10
     OnKeyPress = LE7KeyPress
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 24
+    Top = 40
+    Width = 185
+    Height = 21
+    EditLabel.Width = 87
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Cedula del cliente:'
+    LabelPosition = lpAbove
+    LabelSpacing = 3
+    TabOrder = 11
   end
 end

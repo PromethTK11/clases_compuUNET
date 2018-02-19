@@ -25,19 +25,19 @@ void __fastcall TF3::E1KeyPress(TObject *Sender, char &Key)
 void __fastcall TF3::B2Click(TObject *Sender)
 {
 	F3->Close();
-    F1->Show();
+    F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de tallas abortada"));
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TF3::B1Click(TObject *Sender)
 {
 	if (E1->Text.IsEmpty()||E2->Text.IsEmpty())
-    	MessageDlg("Campos vacios", mtError, TMsgDlgButtons() << mbOK, 0);
+    	MessageDlg("Campos vacios, ingrese valores validos", mtError, TMsgDlgButtons() << mbOK, 0);
 
     	else
         {
             F3->Close();
-        	F4->Show();
+			F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de tallas exitosa"));
         }
 }
 //---------------------------------------------------------------------------

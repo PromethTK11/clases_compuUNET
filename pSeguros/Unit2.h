@@ -7,6 +7,7 @@
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
+#include <ComCtrls.hpp>
 //---------------------------------------------------------------------------
 class TF2 : public TForm
 {
@@ -20,7 +21,6 @@ __published:	// IDE-managed Components
 	TEdit *E2;
 	TLabel *L5;
 	TComboBox *CB2;
-	TEdit *E3;
 	TLabel *L6;
 	TLabel *L9;
 	TEdit *E4;
@@ -30,12 +30,13 @@ __published:	// IDE-managed Components
 	TLabel *L7;
 	TButton *B1;
 	TButton *B2;
+	TDateTimePicker *DateTimePicker1;
 	void __fastcall B2Click(TObject *Sender);
 	void __fastcall E2KeyPress(TObject *Sender, char &Key);
 	void __fastcall E3KeyPress(TObject *Sender, char &Key);
-	void __fastcall E3Click(TObject *Sender);
 	void __fastcall E1KeyPress(TObject *Sender, char &Key);
 	void __fastcall B1Click(TObject *Sender);
+	void __fastcall CB1KeyPress(TObject *Sender, char &Key);
 private:	// User declarations
 public:
 	bool fl1;		// User declarations

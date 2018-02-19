@@ -22,14 +22,14 @@ void __fastcall TF4::B1Click(TObject *Sender)
     	else
         {
         	F4->Close();
-            F1->Show();
+            F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de ubicacion abortada"));
         }
 }
 //---------------------------------------------------------------------------
 void __fastcall TF4::B2Click(TObject *Sender)
 {
 	F4->Close();
-    F1->Show();
+	F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de ubicacion abortada"));
 }
 //---------------------------------------------------------------------------
 void __fastcall TF4::LE1KeyPress(TObject *Sender, char &Key)

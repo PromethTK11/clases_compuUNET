@@ -1,8 +1,8 @@
 object F3: TF3
   Left = 437
-  Top = 235
+  Top = 201
   Width = 261
-  Height = 226
+  Height = 274
   Caption = 'Datos de Talla'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -168,42 +168,42 @@ object F3: TF3
   end
   object L3: TLabel
     Left = 16
-    Top = 32
+    Top = 80
     Width = 49
     Height = 13
     Caption = 'Chaqueta:'
   end
   object L5: TLabel
     Left = 16
-    Top = 88
+    Top = 136
     Width = 48
     Height = 13
     Caption = 'Sombrero:'
   end
   object L6: TLabel
     Left = 96
-    Top = 88
+    Top = 136
     Width = 37
     Height = 13
     Caption = 'Zapato:'
   end
   object L4: TLabel
     Left = 168
-    Top = 32
+    Top = 80
     Width = 45
     Height = 13
     Caption = 'Pantalon:'
   end
   object L2: TLabel
     Left = 96
-    Top = 32
+    Top = 80
     Width = 37
     Height = 13
     Caption = 'Camisa:'
   end
   object B2: TButton
     Left = 152
-    Top = 144
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'Volver'
@@ -212,7 +212,7 @@ object F3: TF3
   end
   object B1: TButton
     Left = 16
-    Top = 144
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'Guardar'
@@ -221,7 +221,7 @@ object F3: TF3
   end
   object CB1: TComboBox
     Left = 16
-    Top = 48
+    Top = 96
     Width = 57
     Height = 21
     ItemHeight = 13
@@ -237,7 +237,7 @@ object F3: TF3
   end
   object CB3: TComboBox
     Left = 16
-    Top = 104
+    Top = 152
     Width = 57
     Height = 21
     ItemHeight = 13
@@ -252,7 +252,7 @@ object F3: TF3
   end
   object CB2: TComboBox
     Left = 96
-    Top = 48
+    Top = 96
     Width = 57
     Height = 21
     ItemHeight = 13
@@ -268,7 +268,7 @@ object F3: TF3
   end
   object E2: TEdit
     Left = 96
-    Top = 104
+    Top = 152
     Width = 57
     Height = 21
     MaxLength = 2
@@ -277,10 +277,24 @@ object F3: TF3
   end
   object E1: TEdit
     Left = 168
-    Top = 48
+    Top = 96
     Width = 57
     Height = 21
+    MaxLength = 2
     TabOrder = 6
+    OnKeyPress = E1KeyPress
+  end
+  object LE1: TLabeledEdit
+    Left = 16
+    Top = 40
+    Width = 121
+    Height = 21
+    EditLabel.Width = 87
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Cedula del cliente:'
+    LabelPosition = lpAbove
+    LabelSpacing = 3
+    TabOrder = 7
     OnKeyPress = E1KeyPress
   end
 end
