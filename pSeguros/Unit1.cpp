@@ -24,6 +24,7 @@ void __fastcall TF1::Cargar1Click(TObject *Sender)
    F2->Show();
    M1->Lines->Add(AnsiString("Carga de info de cliente No." + AnsiString(cPer+1)));
    cPer++;
+	//Remember F1->M1->Lines->Add(AnsiString("Apertura de \"Acerca De\"."+AnsiString(Time())));
 }
 //---------------------------------------------------------------------------
 
