@@ -1,6 +1,6 @@
 object F4: TF4
-  Left = 351
-  Top = 220
+  Left = 528
+  Top = 3
   Width = 459
   Height = 307
   Caption = 'Datos de ubicacion'
@@ -282,6 +282,7 @@ object F4: TF4
     EditLabel.Caption = 'Telefono-Habitacion:'
     LabelPosition = lpAbove
     LabelSpacing = 3
+    MaxLength = 11
     TabOrder = 9
     OnKeyPress = LE7KeyPress
   end
@@ -295,6 +296,7 @@ object F4: TF4
     EditLabel.Caption = 'Telefono Celular:'
     LabelPosition = lpAbove
     LabelSpacing = 3
+    MaxLength = 11
     TabOrder = 10
     OnKeyPress = LE7KeyPress
   end

@@ -1,6 +1,6 @@
 object F3: TF3
-  Left = 437
-  Top = 201
+  Left = 819
+  Top = 179
   Width = 261
   Height = 274
   Caption = 'Datos de Talla'

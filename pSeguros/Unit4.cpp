@@ -23,6 +23,19 @@ void __fastcall TF4::B1Click(TObject *Sender)
         {
         	F4->Close();
             F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de ubicacion abortada"));
+            ofstream ubicacion;
+            ubicacion.open ("data\\ubicacion.txt", ios::app);
+            ubicacion << "Correo Electronico: " << LE9->Text.c_str() << endl;	//Correo electronico
+            ubicacion << "Pais: " << LE1->Text.c_str() << endl;
+            ubicacion << "Estado: " << LE2->Text.c_str() << endl;
+            ubicacion << "Ciudad: " << LE3->Text.c_str() << endl;
+            ubicacion << "Calle o avenida: " << LE4->Text.c_str() << endl;
+            ubicacion << "Urbanizacion o edificio: " << LE5->Text.c_str() << endl;
+            ubicacion << "Casa o Apart: " << LE6->Text.c_str() << endl;
+            ubicacion << "Telefono celular: " << LE8->Text.c_str() << endl;
+            ubicacion << "Telefono-Habitacion: " << LE7->Text.c_str() << endl;
+            ubicacion << "==================================================" << endl;
+            ubicacion.close();
         }
 }
 //---------------------------------------------------------------------------

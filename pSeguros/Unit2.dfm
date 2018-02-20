@@ -1,6 +1,6 @@
 object F2: TF2
-  Left = 541
-  Top = 57
+  Left = 572
+  Top = 19
   Width = 358
   Height = 322
   Caption = 'Datos Personales'
@@ -228,8 +228,9 @@ object F2: TF2
     Width = 49
     Height = 21
     ItemHeight = 13
+    ItemIndex = 1
     TabOrder = 0
-    Text = 'V'
+    Text = 'E'
     OnKeyPress = CB1KeyPress
     Items.Strings = (
       'V'
@@ -262,8 +263,9 @@ object F2: TF2
     Width = 105
     Height = 21
     ItemHeight = 13
+    ItemIndex = 1
     TabOrder = 3
-    Text = 'A+'
+    Text = 'A-'
     OnKeyPress = CB1KeyPress
     Items.Strings = (
       'A+'
@@ -275,7 +277,7 @@ object F2: TF2
       'O+'
       'O-')
   end
-  object E4: TEdit
+  object E3: TEdit
     Left = 104
     Top = 192
     Width = 209
@@ -289,8 +291,9 @@ object F2: TF2
     Width = 57
     Height = 21
     ItemHeight = 13
+    ItemIndex = 1
     TabOrder = 5
-    Text = 'S'
+    Text = 'C'
     OnKeyPress = CB1KeyPress
     Items.Strings = (
       'S'
@@ -304,8 +307,10 @@ object F2: TF2
     Width = 41
     Height = 21
     ItemHeight = 13
+    ItemIndex = 1
     TabOrder = 6
-    Text = 'M'
+    Text = 'F'
+    OnKeyPress = CB1KeyPress
     Items.Strings = (
       'M'
       'F')
@@ -328,7 +333,7 @@ object F2: TF2
     TabOrder = 8
     OnClick = B2Click
   end
-  object DateTimePicker1: TDateTimePicker
+  object DTP1: TDateTimePicker
     Left = 152
     Top = 144
     Width = 161

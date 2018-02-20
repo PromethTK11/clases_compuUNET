@@ -10,6 +10,8 @@
 #include <ExtCtrls.hpp>
 #include <Menus.hpp>
 #include <Graphics.hpp>
+#include <fstream.h>
+#include <string.h>
 //---------------------------------------------------------------------------
 class TF1 : public TForm
 {
@@ -30,7 +32,6 @@ __published:	// IDE-managed Components
 	TButton *B2;
 	void __fastcall Cargar1Click(TObject *Sender);
 	void __fastcall Acercade1Click(TObject *Sender);
-	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall B1Click(TObject *Sender);
 	void __fastcall DatosdeUbicacion1Click(TObject *Sender);
 	void __fastcall DatosdeTalla1Click(TObject *Sender);

@@ -38,6 +38,15 @@ void __fastcall TF3::B1Click(TObject *Sender)
         {
             F3->Close();
 			F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de tallas exitosa"));
+			ofstream tallas;
+            tallas.open ("data\\tallas.txt", ios::app);
+            tallas << "Chaqueta: " << CB1->Text.c_str() << endl;
+            tallas << "Camisa: " << CB2->Text.c_str() << endl;
+            tallas << "Sombrero: " << CB3->Text.c_str() << endl;
+            tallas << "Pantalon: " << E1->Text.c_str() << endl;
+            tallas << "Zapato: " << E2->Text.c_str() << endl;
+            tallas << "==================================================" << endl;
+            tallas.close();
         }
 }
 //---------------------------------------------------------------------------

@@ -23,14 +23,14 @@ __published:	// IDE-managed Components
 	TComboBox *CB2;
 	TLabel *L6;
 	TLabel *L9;
-	TEdit *E4;
+	TEdit *E3;
 	TComboBox *CB3;
 	TComboBox *CB4;
 	TLabel *L8;
 	TLabel *L7;
 	TButton *B1;
 	TButton *B2;
-	TDateTimePicker *DateTimePicker1;
+	TDateTimePicker *DTP1;
 	void __fastcall B2Click(TObject *Sender);
 	void __fastcall E2KeyPress(TObject *Sender, char &Key);
 	void __fastcall E3KeyPress(TObject *Sender, char &Key);

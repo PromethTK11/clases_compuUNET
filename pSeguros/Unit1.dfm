@@ -1,6 +1,6 @@
 object F1: TF1
-  Left = 216
-  Top = 116
+  Left = 217
+  Top = 112
   BorderStyle = bsSingle
   Caption = 'Menu Principal'
   ClientHeight = 394
@@ -148,7 +148,6 @@ object F1: TF1
     000000000000000000000000000000000000000000000000000000000000}
   Menu = MM1
   OldCreateOrder = False
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object L1: TLabel
