@@ -37,7 +37,7 @@ __published:	// IDE-managed Components
 	void __fastcall DatosdeTalla1Click(TObject *Sender);
 private:	// User declarations
 public:
-	int cPer;		// User declarations
+	int cPer;	// User declarations
 	__fastcall TF1(TComponent* Owner);
 };
 //---------------------------------------------------------------------------

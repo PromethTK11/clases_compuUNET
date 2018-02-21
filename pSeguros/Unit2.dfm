@@ -1,6 +1,6 @@
 object F2: TF2
-  Left = 572
-  Top = 19
+  Left = 453
+  Top = 147
   Width = 358
   Height = 322
   Caption = 'Datos Personales'
@@ -228,9 +228,9 @@ object F2: TF2
     Width = 49
     Height = 21
     ItemHeight = 13
-    ItemIndex = 1
+    ItemIndex = 0
     TabOrder = 0
-    Text = 'E'
+    Text = 'V'
     OnKeyPress = CB1KeyPress
     Items.Strings = (
       'V'
@@ -263,9 +263,9 @@ object F2: TF2
     Width = 105
     Height = 21
     ItemHeight = 13
-    ItemIndex = 1
+    ItemIndex = 0
     TabOrder = 3
-    Text = 'A-'
+    Text = 'A+'
     OnKeyPress = CB1KeyPress
     Items.Strings = (
       'A+'
@@ -291,9 +291,9 @@ object F2: TF2
     Width = 57
     Height = 21
     ItemHeight = 13
-    ItemIndex = 1
+    ItemIndex = 0
     TabOrder = 5
-    Text = 'C'
+    Text = 'S'
     OnKeyPress = CB1KeyPress
     Items.Strings = (
       'S'
@@ -307,9 +307,9 @@ object F2: TF2
     Width = 41
     Height = 21
     ItemHeight = 13
-    ItemIndex = 1
+    ItemIndex = 0
     TabOrder = 6
-    Text = 'F'
+    Text = 'M'
     OnKeyPress = CB1KeyPress
     Items.Strings = (
       'M'

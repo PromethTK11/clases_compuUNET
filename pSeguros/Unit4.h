@@ -24,7 +24,7 @@ __published:	// IDE-managed Components
 	TLabeledEdit *LE9;
 	TLabeledEdit *LE7;
 	TLabeledEdit *LE8;
-	TLabeledEdit *LabeledEdit1;
+	TLabeledEdit *LE0;
 	void __fastcall B1Click(TObject *Sender);
 	void __fastcall B2Click(TObject *Sender);
 	void __fastcall LE1KeyPress(TObject *Sender, char &Key);

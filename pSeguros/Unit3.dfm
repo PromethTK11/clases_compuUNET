@@ -1,6 +1,6 @@
 object F3: TF3
-  Left = 819
-  Top = 179
+  Left = 558
+  Top = 105
   Width = 261
   Height = 274
   Caption = 'Datos de Talla'
@@ -294,6 +294,7 @@ object F3: TF3
     EditLabel.Caption = 'Cedula del cliente:'
     LabelPosition = lpAbove
     LabelSpacing = 3
+    MaxLength = 9
     TabOrder = 7
     OnKeyPress = E1KeyPress
   end

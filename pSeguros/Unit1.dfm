@@ -1,6 +1,6 @@
 object F1: TF1
-  Left = 217
-  Top = 112
+  Left = 177
+  Top = 129
   BorderStyle = bsSingle
   Caption = 'Menu Principal'
   ClientHeight = 394

@@ -300,7 +300,7 @@ object F4: TF4
     TabOrder = 10
     OnKeyPress = LE7KeyPress
   end
-  object LabeledEdit1: TLabeledEdit
+  object LE0: TLabeledEdit
     Left = 24
     Top = 40
     Width = 185
@@ -310,6 +310,7 @@ object F4: TF4
     EditLabel.Caption = 'Cedula del cliente:'
     LabelPosition = lpAbove
     LabelSpacing = 3
+    MaxLength = 9
     TabOrder = 11
   end
 end

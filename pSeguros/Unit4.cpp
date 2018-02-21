@@ -17,14 +17,35 @@ __fastcall TF4::TF4(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TF4::B1Click(TObject *Sender)
 {
+    bool fl1=false;
+    char cdi[10];
 	if (LE1->Text.IsEmpty()||LE2->Text.IsEmpty()||LE3->Text.IsEmpty()||LE4->Text.IsEmpty()||LE5->Text.IsEmpty()||LE6->Text.IsEmpty()||LE7->Text.IsEmpty()||LE8->Text.IsEmpty()||LE9->Text.IsEmpty())
     	MessageDlg("Campos vacios", mtError, TMsgDlgButtons() << mbOK, 0);
-    	else
+
+    else
+    {
+    	ifstream cindice;
+        cindice.open ("data\\indice.txt");
+        for (int i=0; i<F1->cPer&&fl1==false; i++)
         {
+        	cindice >> cdi;
+            if (AnsiString(cdi)==LE0->Text)
+            {
+            	fl1=true;
+            }
+            else
+            	MessageDlg("Cedula no existente, ingrese una cedula existente", mtError, TMsgDlgButtons() << mbOK, 0);
+        }
+        cindice.close();
+    }
+
+    if (fl1==true)
+    {
         	F4->Close();
             F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de ubicacion abortada"));
             ofstream ubicacion;
             ubicacion.open ("data\\ubicacion.txt", ios::app);
+            ubicacion << LE0->Text.c_str() << endl;
             ubicacion << "Correo Electronico: " << LE9->Text.c_str() << endl;	//Correo electronico
             ubicacion << "Pais: " << LE1->Text.c_str() << endl;
             ubicacion << "Estado: " << LE2->Text.c_str() << endl;
@@ -36,6 +57,16 @@ void __fastcall TF4::B1Click(TObject *Sender)
             ubicacion << "Telefono-Habitacion: " << LE7->Text.c_str() << endl;
             ubicacion << "==================================================" << endl;
             ubicacion.close();
+            LE0->Clear();
+            LE9->Clear();
+            LE1->Clear();
+            LE2->Clear();
+            LE3->Clear();
+            LE4->Clear();
+            LE5->Clear();
+            LE6->Clear();
+            LE7->Clear();
+            LE8->Clear();
         }
 }
 //---------------------------------------------------------------------------

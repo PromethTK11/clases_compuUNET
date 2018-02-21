@@ -38,8 +38,7 @@ __published:	// IDE-managed Components
 	void __fastcall B1Click(TObject *Sender);
 	void __fastcall CB1KeyPress(TObject *Sender, char &Key);
 private:	// User declarations
-public:
-	bool fl1;		// User declarations
+public:		// User declarations
 	__fastcall TF2(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
