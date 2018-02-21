@@ -1,6 +1,6 @@
 object F1: TF1
-  Left = 177
-  Top = 129
+  Left = 187
+  Top = 103
   BorderStyle = bsSingle
   Caption = 'Menu Principal'
   ClientHeight = 394
@@ -18656,9 +18656,9 @@ object F1: TF1
     TabOrder = 1
   end
   object B1: TButton
-    Left = 320
-    Top = 56
-    Width = 65
+    Left = 344
+    Top = 376
+    Width = 41
     Height = 17
     Caption = 'Limpiar'
     TabOrder = 2
@@ -18680,12 +18680,39 @@ object F1: TF1
     TabOrder = 3
   end
   object B2: TButton
-    Left = 224
-    Top = 56
-    Width = 65
-    Height = 17
+    Left = 320
+    Top = 48
+    Width = 57
+    Height = 25
     Caption = 'Buscar'
     TabOrder = 4
+    OnClick = B2Click
+  end
+  object LE1: TLabeledEdit
+    Left = 208
+    Top = 48
+    Width = 105
+    Height = 21
+    Color = clInfoText
+    EditLabel.Width = 96
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Cedula a buscar:'
+    EditLabel.Font.Charset = ANSI_CHARSET
+    EditLabel.Font.Color = clWindowText
+    EditLabel.Font.Height = -11
+    EditLabel.Font.Name = 'Consolas'
+    EditLabel.Font.Style = []
+    EditLabel.ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -11
+    Font.Name = 'Consolas'
+    Font.Style = []
+    LabelPosition = lpAbove
+    LabelSpacing = 3
+    MaxLength = 9
+    ParentFont = False
+    TabOrder = 5
   end
   object MM1: TMainMenu
     Left = 328

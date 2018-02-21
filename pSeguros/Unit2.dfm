@@ -339,11 +339,12 @@ object F2: TF2
     Width = 161
     Height = 21
     CalAlignment = dtaLeft
-    Date = 43150.6050941319
-    Time = 43150.6050941319
+    Date = 32874
+    Time = 32874
     DateFormat = dfShort
     DateMode = dmComboBox
     Kind = dtkDate
+    MaxDate = 43150
     ParseInput = False
     TabOrder = 9
   end

@@ -31,10 +31,14 @@ void __fastcall TF3::B2Click(TObject *Sender)
 
 void __fastcall TF3::B1Click(TObject *Sender)
 {
-    bool fl1=false;
-    char cdi[10];
+    bool fl1=false, fl2=true;
+    char cdi[10],cdi2[10];
 	if (E1->Text.IsEmpty()||E2->Text.IsEmpty())
     	MessageDlg("Campos vacios, ingrese valores validos", mtError, TMsgDlgButtons() << mbOK, 0);
+
+    //El proceso para chequear si se repite es simple, pasa primero por el archivo indice para chequear si existe
+    //Y luego pasa por el archivo de las ubicaciones para ver si ya se ha guardado algo existente
+    //Cada flag es un proceso completado
 
     else
     {
@@ -45,7 +49,20 @@ void __fastcall TF3::B1Click(TObject *Sender)
         	cindice >> cdi;
             if (AnsiString(cdi)==LE1->Text)
             {
-            	fl1=true;
+            	ifstream cindice2;
+                cindice2.open("data\\tallas.txt");
+                for (int j=0; j<(F1->cPer*10)&&fl2==true; j++)
+                {
+                	cindice2 >> cdi2;
+                    if (AnsiString(cdi2)==LE1->Text)
+                    {
+                    	MessageDlg("El ciente ya posee datos de talla, ingrese un cliente valido", mtError, TMsgDlgButtons() << mbOK, 0);
+                        fl2=false;
+                    }
+
+                }
+                fl1=true;
+                cindice2.close();
             }
             else
             	MessageDlg("Cedula no existente, ingrese una cedula existente", mtError, TMsgDlgButtons() << mbOK, 0);
@@ -53,7 +70,7 @@ void __fastcall TF3::B1Click(TObject *Sender)
         cindice.close();
     }
 
-    if (fl1==true)
+    if (fl1==true&&fl2==true)
     {
     	F3->Close();
 		F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de tallas exitosa"));

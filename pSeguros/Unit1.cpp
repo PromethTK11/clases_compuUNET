@@ -16,6 +16,7 @@ __fastcall TF1::TF1(TComponent* Owner)
 	: TForm(Owner)
 {
 	cPer=0;
+    M1->Clear();
     M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Programa abierto, bienvenido"));
     E1->Text=AnsiString(cPer);
     //OJO SOLO PARA TESTEAR
@@ -61,6 +62,39 @@ void __fastcall TF1::DatosdeTalla1Click(TObject *Sender)
 {
 	F3->Show();
     M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Intento de carga de tallas"));
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TF1::B2Click(TObject *Sender)
+{
+    char scdi[10];
+    AnsiString cout;
+	if (LE1->Text.IsEmpty())
+    	MessageDlg("Campo vacios, ingrese cedula a buscar", mtError, TMsgDlgButtons() << mbOK, 0);
+
+    else
+    {
+        M1->Clear();
+        M1->Lines->Add("Resultados de la busqueda:");
+    	ifstream clientes,tallas,ubicacion;
+        fstream resultado;
+        clientes.open ("data\\clientes.txt");
+        tallas.open ("data\\tallas.txt");
+        ubicacion.open ("data\\ubicacion.txt");
+        resultado.open ("data\\resultado.txt", ios::trunc);
+        for (int k=0; k<(cPer*10); k++)
+        {
+        	clientes >> scdi;
+            if (AnsiString(scdi)==LE1->Text)
+            {
+            	/*for (int z=0; z<9; z++)
+                {
+                	resultado.getline(clientes,100);
+                }*/
+            }
+
+        }
+    }
 }
 //---------------------------------------------------------------------------
 
