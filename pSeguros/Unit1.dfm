@@ -1,10 +1,10 @@
 object F1: TF1
-  Left = 187
-  Top = 103
+  Left = 252
+  Top = 140
   BorderStyle = bsSingle
   Caption = 'Menu Principal'
-  ClientHeight = 394
-  ClientWidth = 768
+  ClientHeight = 427
+  ClientWidth = 767
   Color = clInactiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -177,10 +177,10 @@ object F1: TF1
     ParentFont = False
   end
   object I1: TImage
-    Left = 384
+    Left = 383
     Top = 0
     Width = 384
-    Height = 394
+    Height = 427
     Align = alRight
     Picture.Data = {
       07544269746D617036000900424D360009000000000036000000280000000002
@@ -18619,6 +18619,7 @@ object F1: TF1
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFF}
     Stretch = True
+    OnClick = I1Click
   end
   object ST1: TStaticText
     Left = 0
@@ -18642,7 +18643,7 @@ object F1: TF1
     Left = 0
     Top = 72
     Width = 385
-    Height = 321
+    Height = 353
     Color = clDefault
     Font.Charset = ANSI_CHARSET
     Font.Color = clLime
@@ -18657,7 +18658,7 @@ object F1: TF1
   end
   object B1: TButton
     Left = 344
-    Top = 376
+    Top = 408
     Width = 41
     Height = 17
     Caption = 'Limpiar'
@@ -18713,6 +18714,7 @@ object F1: TF1
     MaxLength = 9
     ParentFont = False
     TabOrder = 5
+    OnKeyPress = LE1KeyPress
   end
   object MM1: TMainMenu
     Left = 328

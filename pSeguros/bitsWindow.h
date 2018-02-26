@@ -1,51 +1,49 @@
 //---------------------------------------------------------------------------
 
-#ifndef Unit1H
-#define Unit1H
+#ifndef bitsWindowH
+#define bitsWindowH
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ExtCtrls.hpp>
-#include <Menus.hpp>
-#include <Graphics.hpp>
-#include <fstream.h>
+#include <bitset>
 #include <string.h>
 //---------------------------------------------------------------------------
-class TF1 : public TForm
+class TbitsF5 : public TForm
 {
 __published:	// IDE-managed Components
-	TImage *I1;
-	TMainMenu *MM1;
-	TMenuItem *Guardar1;
-	TMenuItem *Cargar1;
-	TMenuItem *Acercade1;
-	TStaticText *ST1;
-	TMemo *M1;
 	TLabel *L1;
+	TLabel *L0;
+	TLabeledEdit *LE1;
+	TLabeledEdit *LE2;
 	TButton *B1;
-	TMenuItem *DatosdeUbicacion1;
-	TMenuItem *DatosdeTalla1;
+	TButton *B2;
+	TLabeledEdit *LE3;
 	TLabel *L2;
 	TEdit *E1;
-	TButton *B2;
-	TLabeledEdit *LE1;
-	void __fastcall Cargar1Click(TObject *Sender);
-	void __fastcall Acercade1Click(TObject *Sender);
+	TButton *B3;
+	TLabel *L3;
+	TLabel *L8;
+	TLabel *L10;
+	TLabel *L9;
+	TLabel *L7;
+	TLabel *L5;
+	TLabel *L6;
+	TLabeledEdit *LE4;
+	TButton *G4;
+	TPanel *P1;
 	void __fastcall B1Click(TObject *Sender);
-	void __fastcall DatosdeUbicacion1Click(TObject *Sender);
-	void __fastcall DatosdeTalla1Click(TObject *Sender);
 	void __fastcall B2Click(TObject *Sender);
-	void __fastcall LE1KeyPress(TObject *Sender, char &Key);
-	void __fastcall I1Click(TObject *Sender);
+	void __fastcall E1KeyPress(TObject *Sender, char &Key);
+	void __fastcall B3Click(TObject *Sender);
 private:	// User declarations
 public:
-	int cPer;	// User declarations
-	__fastcall TF1(TComponent* Owner);
+	int cont;		// User declarations
+	__fastcall TbitsF5(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TF1 *F1;
+extern PACKAGE TbitsF5 *bitsF5;
 //---------------------------------------------------------------------------
 #endif
- 

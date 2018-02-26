@@ -7,6 +7,7 @@
 #include "Unit2.h"
 #include "Unit3.h"
 #include "Unit4.h"
+#include "bitsWindow.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -25,7 +26,11 @@ __fastcall TF1::TF1(TComponent* Owner)
     cindice.open ("data\\indice.txt", ios::trunc);
     ubicacion.open ("data\\ubicacion.txt", ios::trunc);
     talla.open ("data\\tallas.txt", ios::trunc);
-    //end testing
+    clientes.close();
+    cindice.close();
+    ubicacion.close();
+    talla.close();
+
 }
 //---------------------------------------------------------------------------
 
@@ -67,34 +72,111 @@ void __fastcall TF1::DatosdeTalla1Click(TObject *Sender)
 
 void __fastcall TF1::B2Click(TObject *Sender)
 {
-    char scdi[10];
-    AnsiString cout;
+
 	if (LE1->Text.IsEmpty())
     	MessageDlg("Campo vacios, ingrese cedula a buscar", mtError, TMsgDlgButtons() << mbOK, 0);
 
     else
     {
+    	char scdi[1024];
+        string input;
+        bool fl3;
+
         M1->Clear();
         M1->Lines->Add("Resultados de la busqueda:");
+
     	ifstream clientes,tallas,ubicacion;
-        fstream resultado;
+        ofstream resultado;
         clientes.open ("data\\clientes.txt");
         tallas.open ("data\\tallas.txt");
         ubicacion.open ("data\\ubicacion.txt");
-        resultado.open ("data\\resultado.txt", ios::trunc);
+        resultado.open ("data\\resultado.txt");
+
+        //Busqueda para datos como tal
         for (int k=0; k<(cPer*10); k++)
         {
         	clientes >> scdi;
             if (AnsiString(scdi)==LE1->Text)
             {
-            	/*for (int z=0; z<9; z++)
+                M1->Lines->Add("\n--------Datos Personales--------");
+                resultado << "\n--------Datos Personales--------";
+
+            	for (int z=0; z<9; z++)
                 {
-                	resultado.getline(clientes,100);
-                }*/
+                    std::getline(clientes,input);
+                    resultado << input.c_str() << endl;
+                    M1->Lines->Add(AnsiString(input.c_str()));
+
+                }
+
+                fl3=true;
             }
 
         }
+
+        //Busqueda para datos de ubicacion
+        for (int k=0; k<(cPer*11); k++)
+        {
+        	ubicacion >> scdi;
+            if (AnsiString(scdi)==LE1->Text)
+            {
+                M1->Lines->Add("\n--------Datos de Ubicacion--------");
+                resultado << "\n--------Datos de Ubicacion--------";
+
+            	for (int z=0; z<10; z++)
+                {
+                    std::getline(ubicacion,input);
+                    resultado << input.c_str() << endl;
+                    M1->Lines->Add(AnsiString(input.c_str()));
+
+                }
+
+            }
+
+        }
+
+        //Busqueda para datos de talla
+        for (int k=0; k<(cPer*7); k++)
+        {
+        	tallas >> scdi;
+            if (AnsiString(scdi)==LE1->Text)
+            {
+                M1->Lines->Add("\n--------Datos de Talla--------");
+                resultado << "\n--------Datos de Talla--------";
+
+            	for (int z=0; z<6; z++)
+                {
+                    std::getline(tallas,input);
+                    resultado << input.c_str() << endl;
+                    M1->Lines->Add(AnsiString(input.c_str()));
+
+                }
+
+            }
+
+        }
+
+        if (fl3==false)
+        	M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Persona no encontrada"));
+
+        clientes.close();
+        tallas.close();
+        ubicacion.close();
+        resultado.close();
     }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TF1::LE1KeyPress(TObject *Sender, char &Key)
+{
+	if ((Key<'0'||Key>'9')&&Key!=8) Key=0;
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TF1::I1Click(TObject *Sender)
+{
+	bitsF5->ShowModal();
 }
 //---------------------------------------------------------------------------
 

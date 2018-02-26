@@ -312,5 +312,6 @@ object F4: TF4
     LabelSpacing = 3
     MaxLength = 9
     TabOrder = 11
+    OnKeyPress = LE7KeyPress
   end
 end

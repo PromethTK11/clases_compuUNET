@@ -1,14 +1,14 @@
-object F2: TF2
-  Left = 265
-  Top = 90
-  Width = 358
-  Height = 322
-  Caption = 'Datos Personales'
-  Color = clGradientActiveCaption
-  Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+object bitsF5: TbitsF5
+  Left = 247
+  Top = 36
+  Width = 480
+  Height = 469
+  Caption = 'ERR0#%!$#'#172'%&$%\\#'
+  Color = clGrayText
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWhite
+  Font.Height = -13
+  Font.Name = 'Consolas'
   Font.Style = []
   Icon.Data = {
     0000010001002020000001002000A81000001600000028000000200000004000
@@ -147,204 +147,285 @@ object F2: TF2
     0001E0000007E0000007E0000007F800001FF800001FFC00003FFFC001FF}
   OldCreateOrder = False
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 15
   object L1: TLabel
-    Left = 0
-    Top = 0
-    Width = 342
-    Height = 17
-    Align = alTop
+    Left = 32
+    Top = 40
+    Width = 385
+    Height = 19
     Alignment = taCenter
     AutoSize = False
-    Caption = 'Ingrese los datos personales del cliente'
+    Caption = 'Calculo de las operaciones'
     Color = clNavy
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
-    Font.Height = -13
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object L0: TLabel
+    Left = 0
+    Top = 0
+    Width = 464
+    Height = 19
+    Align = alTop
+    Alignment = taCenter
+    Caption = '[TOP SECRET] Mascaras y bits'
+    Color = clBlack
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -16
     Font.Name = 'Consolas'
     Font.Style = []
     ParentColor = False
     ParentFont = False
   end
   object L2: TLabel
-    Left = 24
-    Top = 80
-    Width = 65
-    Height = 13
-    Caption = 'Nacionalidad:'
+    Left = 32
+    Top = 136
+    Width = 385
+    Height = 19
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Mascara del RGB en 16 bits'
+    Color = clNavy
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
   end
   object L3: TLabel
-    Left = 96
-    Top = 80
-    Width = 98
-    Height = 13
-    Caption = 'C'#233'dula de Identidad:'
-  end
-  object L4: TLabel
-    Left = 24
-    Top = 32
-    Width = 87
-    Height = 13
-    Caption = 'Nombre Completo:'
-  end
-  object L5: TLabel
-    Left = 24
-    Top = 128
-    Width = 84
-    Height = 13
-    Caption = 'Grupo sanguineo:'
-  end
-  object L6: TLabel
-    Left = 152
-    Top = 128
-    Width = 104
-    Height = 13
-    Caption = 'Fecha de Nacimiento:'
-  end
-  object L9: TLabel
-    Left = 104
+    Left = 32
     Top = 176
-    Width = 64
-    Height = 13
-    Caption = 'Ciudad Natal:'
+    Width = 145
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Ingrese color en bits'
+    Color = clNavy
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
   end
   object L8: TLabel
-    Left = 272
-    Top = 80
-    Width = 27
-    Height = 13
-    Caption = 'Sexo:'
+    Left = 32
+    Top = 232
+    Width = 153
+    Height = 25
+    Alignment = taCenter
+    AutoSize = False
+    Color = clBlack
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -11
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object L10: TLabel
+    Left = 32
+    Top = 304
+    Width = 153
+    Height = 25
+    Alignment = taCenter
+    AutoSize = False
+    Color = clBlack
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -11
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object L9: TLabel
+    Left = 264
+    Top = 232
+    Width = 153
+    Height = 25
+    Alignment = taCenter
+    AutoSize = False
+    Color = clBlack
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -11
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
   end
   object L7: TLabel
-    Left = 24
-    Top = 176
-    Width = 47
-    Height = 13
-    Caption = 'Edo. Civil:'
+    Left = 48
+    Top = 288
+    Width = 112
+    Height = 15
+    Caption = 'Mascara: &&0x7C00'
   end
-  object CB1: TComboBox
-    Left = 24
-    Top = 96
-    Width = 49
-    Height = 21
-    ItemHeight = 13
-    ItemIndex = 0
-    TabOrder = 0
-    Text = 'V'
-    OnKeyPress = CB1KeyPress
-    Items.Strings = (
-      'V'
-      'E'
-      'P')
-  end
-  object E1: TEdit
-    Left = 96
-    Top = 96
-    Width = 153
-    Height = 21
-    AutoSize = False
-    MaxLength = 9
-    TabOrder = 1
-    OnKeyPress = E1KeyPress
-  end
-  object E2: TEdit
-    Left = 24
-    Top = 48
-    Width = 289
-    Height = 21
-    AutoSize = False
-    MaxLength = 30
-    TabOrder = 2
-    OnKeyPress = E2KeyPress
-  end
-  object CB2: TComboBox
-    Left = 24
-    Top = 144
+  object L5: TLabel
+    Left = 56
+    Top = 216
     Width = 105
-    Height = 21
-    ItemHeight = 13
-    ItemIndex = 0
-    TabOrder = 3
-    Text = 'A+'
-    OnKeyPress = CB1KeyPress
-    Items.Strings = (
-      'A+'
-      'A-'
-      'AB+'
-      'AB-'
-      'B+'
-      'B-'
-      'O+'
-      'O-')
+    Height = 15
+    Caption = 'Mascara: &&0x3E0'
   end
-  object E3: TEdit
-    Left = 104
-    Top = 192
-    Width = 209
-    Height = 21
-    TabOrder = 4
-    OnKeyPress = E2KeyPress
+  object L6: TLabel
+    Left = 288
+    Top = 216
+    Width = 98
+    Height = 15
+    Caption = 'Mascara: &&0xF1'
   end
-  object CB3: TComboBox
-    Left = 24
-    Top = 192
-    Width = 57
-    Height = 21
-    ItemHeight = 13
-    ItemIndex = 0
-    TabOrder = 5
-    Text = 'S'
-    OnKeyPress = CB1KeyPress
-    Items.Strings = (
-      'S'
-      'C'
-      'V'
-      'D')
+  object LE1: TLabeledEdit
+    Left = 32
+    Top = 88
+    Width = 121
+    Height = 22
+    Color = clMenuText
+    EditLabel.Width = 77
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Operacion 1'
+    EditLabel.Color = clNavy
+    EditLabel.ParentColor = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -12
+    Font.Name = 'Consolas'
+    Font.Style = []
+    LabelPosition = lpAbove
+    LabelSpacing = 3
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
   end
-  object CB4: TComboBox
-    Left = 272
-    Top = 96
-    Width = 41
-    Height = 21
-    ItemHeight = 13
-    ItemIndex = 0
-    TabOrder = 6
-    Text = 'M'
-    OnKeyPress = CB1KeyPress
-    Items.Strings = (
-      'M'
-      'F')
+  object LE2: TLabeledEdit
+    Left = 192
+    Top = 88
+    Width = 121
+    Height = 22
+    Color = clMenuText
+    EditLabel.Width = 77
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Operacion 2'
+    EditLabel.Color = clNavy
+    EditLabel.ParentColor = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -12
+    Font.Name = 'Consolas'
+    Font.Style = []
+    LabelPosition = lpAbove
+    LabelSpacing = 3
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
   end
   object B1: TButton
-    Left = 24
-    Top = 240
-    Width = 75
+    Left = 336
+    Top = 88
+    Width = 81
     Height = 25
-    Caption = 'Guardar'
-    TabOrder = 7
+    Caption = 'Calcular'
+    TabOrder = 2
     OnClick = B1Click
   end
   object B2: TButton
-    Left = 240
-    Top = 240
-    Width = 75
+    Left = 160
+    Top = 368
+    Width = 33
     Height = 25
-    Caption = 'Volver'
+    Caption = '+'
+    TabOrder = 3
+    OnClick = B2Click
+  end
+  object LE3: TLabeledEdit
+    Left = 32
+    Top = 368
+    Width = 121
+    Height = 22
+    Color = clMenuText
+    EditLabel.Width = 119
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Contador hasta 3 '
+    EditLabel.Color = clNavy
+    EditLabel.ParentColor = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -12
+    Font.Name = 'Consolas'
+    Font.Style = []
+    LabelPosition = lpAbove
+    LabelSpacing = 3
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 4
+  end
+  object E1: TEdit
+    Left = 184
+    Top = 176
+    Width = 121
+    Height = 23
+    Color = clBtnText
+    MaxLength = 16
+    TabOrder = 5
+    OnKeyPress = E1KeyPress
+  end
+  object B3: TButton
+    Left = 312
+    Top = 176
+    Width = 105
+    Height = 25
+    Caption = 'Aplicar'
+    TabOrder = 6
+    OnClick = B3Click
+  end
+  object LE4: TLabeledEdit
+    Left = 224
+    Top = 304
+    Width = 145
+    Height = 22
+    Color = clMenuText
+    EditLabel.Width = 210
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Ingrese color binario a probar'
+    EditLabel.Color = clNavy
+    EditLabel.ParentColor = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -12
+    Font.Name = 'Consolas'
+    Font.Style = []
+    LabelPosition = lpAbove
+    LabelSpacing = 3
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 7
+  end
+  object G4: TButton
+    Left = 376
+    Top = 304
+    Width = 65
+    Height = 25
+    Caption = 'Probar'
     TabOrder = 8
     OnClick = B2Click
   end
-  object DTP1: TDateTimePicker
-    Left = 152
-    Top = 144
-    Width = 161
-    Height = 21
-    CalAlignment = dtaLeft
-    Date = 32874
-    Time = 32874
-    DateFormat = dfShort
-    DateMode = dmComboBox
-    Kind = dtkDate
-    ParseInput = False
+  object P1: TPanel
+    Left = 224
+    Top = 352
+    Width = 217
+    Height = 41
+    Caption = 'WIP'
+    Color = clBackground
     TabOrder = 9
   end
 end

@@ -109,3 +109,4 @@ void __fastcall TF4::LE9KeyPress(TObject *Sender, char &Key)
 	if (Key==' ')Key=0;
 }
 //---------------------------------------------------------------------------
+
