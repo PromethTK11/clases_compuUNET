@@ -50,17 +50,18 @@ void __fastcall TF4::B1Click(TObject *Sender)
                 fl1=true;
                 cindice2.close();
             }
-            else
-            	MessageDlg("Cedula no existente, ingrese una cedula existente", mtError, TMsgDlgButtons() << mbOK, 0);
+
         }
         cindice.close();
     }
 
+    if(fl1==false)
+            	MessageDlg("Cedula no existente, ingrese una cedula existente", mtError, TMsgDlgButtons() << mbOK, 0);
+
 
     if (fl1==true&&fl2==true)
     {
-        	F4->Close();
-            F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de ubicacion exitosa"));
+        	F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de ubicacion exitosa"));
             ofstream ubicacion;
             ubicacion.open ("data\\ubicacion.txt", ios::app);
             ubicacion << LE0->Text.c_str() << endl;
@@ -85,6 +86,7 @@ void __fastcall TF4::B1Click(TObject *Sender)
             LE6->Clear();
             LE7->Clear();
             LE8->Clear();
+            F4->Close();
     }
 }
 //---------------------------------------------------------------------------

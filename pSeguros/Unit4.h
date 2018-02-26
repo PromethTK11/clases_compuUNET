@@ -8,6 +8,7 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ExtCtrls.hpp>
+#include <Mask.hpp>
 //---------------------------------------------------------------------------
 class TF4 : public TForm
 {
@@ -22,9 +23,11 @@ __published:	// IDE-managed Components
 	TLabeledEdit *LE5;
 	TLabeledEdit *LE6;
 	TLabeledEdit *LE9;
-	TLabeledEdit *LE7;
-	TLabeledEdit *LE8;
 	TLabeledEdit *LE0;
+	TMaskEdit *LE8;
+	TMaskEdit *LE7;
+	TLabel *L3;
+	TLabel *L2;
 	void __fastcall B1Click(TObject *Sender);
 	void __fastcall B2Click(TObject *Sender);
 	void __fastcall LE1KeyPress(TObject *Sender, char &Key);

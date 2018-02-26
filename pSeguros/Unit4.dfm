@@ -1,6 +1,6 @@
 object F4: TF4
-  Left = 528
-  Top = 3
+  Left = 502
+  Top = 147
   Width = 459
   Height = 307
   Caption = 'Datos de ubicacion'
@@ -166,6 +166,20 @@ object F4: TF4
     ParentColor = False
     ParentFont = False
   end
+  object L3: TLabel
+    Left = 184
+    Top = 168
+    Width = 80
+    Height = 13
+    Caption = 'Telefono Celular:'
+  end
+  object L2: TLabel
+    Left = 304
+    Top = 168
+    Width = 114
+    Height = 13
+    Caption = 'Telefono de Habitacion:'
+  end
   object B1: TButton
     Left = 32
     Top = 224
@@ -250,7 +264,7 @@ object F4: TF4
   object LE6: TLabeledEdit
     Left = 24
     Top = 184
-    Width = 121
+    Width = 137
     Height = 21
     EditLabel.Width = 64
     EditLabel.Height = 13
@@ -272,34 +286,6 @@ object F4: TF4
     TabOrder = 8
     OnKeyPress = LE9KeyPress
   end
-  object LE7: TLabeledEdit
-    Left = 296
-    Top = 184
-    Width = 121
-    Height = 21
-    EditLabel.Width = 99
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Telefono-Habitacion:'
-    LabelPosition = lpAbove
-    LabelSpacing = 3
-    MaxLength = 11
-    TabOrder = 9
-    OnKeyPress = LE7KeyPress
-  end
-  object LE8: TLabeledEdit
-    Left = 160
-    Top = 184
-    Width = 121
-    Height = 21
-    EditLabel.Width = 80
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Telefono Celular:'
-    LabelPosition = lpAbove
-    LabelSpacing = 3
-    MaxLength = 11
-    TabOrder = 10
-    OnKeyPress = LE7KeyPress
-  end
   object LE0: TLabeledEdit
     Left = 24
     Top = 40
@@ -311,7 +297,39 @@ object F4: TF4
     LabelPosition = lpAbove
     LabelSpacing = 3
     MaxLength = 9
-    TabOrder = 11
+    TabOrder = 9
     OnKeyPress = LE7KeyPress
+  end
+  object LE8: TMaskEdit
+    Left = 184
+    Top = 184
+    Width = 105
+    Height = 24
+    EditMask = '!\(9999\)000-0000;1;_'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    MaxLength = 14
+    ParentFont = False
+    TabOrder = 10
+    Text = '(    )   -    '
+  end
+  object LE7: TMaskEdit
+    Left = 312
+    Top = 184
+    Width = 105
+    Height = 24
+    EditMask = '!\(9999\)000-0000;1;_'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    MaxLength = 14
+    ParentFont = False
+    TabOrder = 11
+    Text = '(    )   -    '
   end
 end

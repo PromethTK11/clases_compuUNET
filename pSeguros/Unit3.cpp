@@ -32,7 +32,7 @@ void __fastcall TF3::B2Click(TObject *Sender)
 void __fastcall TF3::B1Click(TObject *Sender)
 {
     bool fl1=false, fl2=true;
-    char cdi[10],cdi2[10];
+    char cdi[1024],cdi2[1024];
 	if (E1->Text.IsEmpty()||E2->Text.IsEmpty())
     	MessageDlg("Campos vacios, ingrese valores validos", mtError, TMsgDlgButtons() << mbOK, 0);
 
@@ -64,16 +64,17 @@ void __fastcall TF3::B1Click(TObject *Sender)
                 fl1=true;
                 cindice2.close();
             }
-            else
-            	MessageDlg("Cedula no existente, ingrese una cedula existente", mtError, TMsgDlgButtons() << mbOK, 0);
+
         }
         cindice.close();
     }
 
+    if(fl1==false)
+            	MessageDlg("Cedula no existente, ingrese una cedula existente", mtError, TMsgDlgButtons() << mbOK, 0);
+
     if (fl1==true&&fl2==true)
     {
-    	F3->Close();
-		F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de tallas exitosa"));
+    	F1->M1->Lines->Add(AnsiString("[" + AnsiString(Time()) + "]Carga de tallas exitosa"));
 		ofstream tallas;
         tallas.open ("data\\tallas.txt", ios::app);
         tallas << LE1->Text.c_str() << endl;
@@ -90,6 +91,7 @@ void __fastcall TF3::B1Click(TObject *Sender)
         CB3->ItemIndex=0;
         E1->Clear();
         E2->Clear();
+        F3->Close();
     }
 }
 //---------------------------------------------------------------------------

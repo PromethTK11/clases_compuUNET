@@ -31,6 +31,8 @@ __published:	// IDE-managed Components
 	TEdit *E1;
 	TButton *B2;
 	TLabeledEdit *LE1;
+	TMenuItem *GenerarListado1;
+	TMenuItem *Bits1;
 	void __fastcall Cargar1Click(TObject *Sender);
 	void __fastcall Acercade1Click(TObject *Sender);
 	void __fastcall B1Click(TObject *Sender);
@@ -39,6 +41,8 @@ __published:	// IDE-managed Components
 	void __fastcall B2Click(TObject *Sender);
 	void __fastcall LE1KeyPress(TObject *Sender, char &Key);
 	void __fastcall I1Click(TObject *Sender);
+	void __fastcall Bits1Click(TObject *Sender);
+	void __fastcall GenerarListado1Click(TObject *Sender);
 private:	// User declarations
 public:
 	int cPer;	// User declarations

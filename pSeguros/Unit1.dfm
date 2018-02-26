@@ -1,6 +1,6 @@
 object F1: TF1
-  Left = 252
-  Top = 140
+  Left = 253
+  Top = 133
   BorderStyle = bsSingle
   Caption = 'Menu Principal'
   ClientHeight = 427
@@ -18937,6 +18937,14 @@ object F1: TF1
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
       Caption = 'Acerca de:'
       OnClick = Acercade1Click
+    end
+    object GenerarListado1: TMenuItem
+      Caption = 'Generar Listado'
+      OnClick = GenerarListado1Click
+    end
+    object Bits1: TMenuItem
+      Caption = 'Bits'
+      OnClick = Bits1Click
     end
   end
 end

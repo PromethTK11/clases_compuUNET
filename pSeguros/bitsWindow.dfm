@@ -1,8 +1,8 @@
 object bitsF5: TbitsF5
-  Left = 247
-  Top = 36
+  Left = 293
+  Top = 135
   Width = 480
-  Height = 469
+  Height = 449
   Caption = 'ERR0#%!$#'#172'%&$%\\#'
   Color = clGrayText
   Font.Charset = ANSI_CHARSET
@@ -216,54 +216,6 @@ object bitsF5: TbitsF5
     ParentColor = False
     ParentFont = False
   end
-  object L8: TLabel
-    Left = 32
-    Top = 232
-    Width = 153
-    Height = 25
-    Alignment = taCenter
-    AutoSize = False
-    Color = clBlack
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clLime
-    Font.Height = -11
-    Font.Name = 'Consolas'
-    Font.Style = []
-    ParentColor = False
-    ParentFont = False
-  end
-  object L10: TLabel
-    Left = 32
-    Top = 304
-    Width = 153
-    Height = 25
-    Alignment = taCenter
-    AutoSize = False
-    Color = clBlack
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clLime
-    Font.Height = -11
-    Font.Name = 'Consolas'
-    Font.Style = []
-    ParentColor = False
-    ParentFont = False
-  end
-  object L9: TLabel
-    Left = 264
-    Top = 232
-    Width = 153
-    Height = 25
-    Alignment = taCenter
-    AutoSize = False
-    Color = clBlack
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clLime
-    Font.Height = -11
-    Font.Name = 'Consolas'
-    Font.Style = []
-    ParentColor = False
-    ParentFont = False
-  end
   object L7: TLabel
     Left = 48
     Top = 288
@@ -284,6 +236,13 @@ object bitsF5: TbitsF5
     Width = 98
     Height = 15
     Caption = 'Mascara: &&0xF1'
+  end
+  object L12: TLabel
+    Left = 312
+    Top = 288
+    Width = 56
+    Height = 15
+    Caption = 'Original'
   end
   object LE1: TLabeledEdit
     Left = 32
@@ -339,18 +298,18 @@ object bitsF5: TbitsF5
     OnClick = B1Click
   end
   object B2: TButton
-    Left = 160
-    Top = 368
-    Width = 33
+    Left = 224
+    Top = 376
+    Width = 57
     Height = 25
     Caption = '+'
     TabOrder = 3
     OnClick = B2Click
   end
   object LE3: TLabeledEdit
-    Left = 32
-    Top = 368
-    Width = 121
+    Left = 160
+    Top = 376
+    Width = 49
     Height = 22
     Color = clMenuText
     EditLabel.Width = 119
@@ -388,44 +347,56 @@ object bitsF5: TbitsF5
     TabOrder = 6
     OnClick = B3Click
   end
-  object LE4: TLabeledEdit
-    Left = 224
-    Top = 304
-    Width = 145
-    Height = 22
-    Color = clMenuText
-    EditLabel.Width = 210
-    EditLabel.Height = 15
-    EditLabel.Caption = 'Ingrese color binario a probar'
-    EditLabel.Color = clNavy
-    EditLabel.ParentColor = False
+  object L8: TEdit
+    Left = 32
+    Top = 232
+    Width = 161
+    Height = 27
     Font.Charset = ANSI_CHARSET
-    Font.Color = clLime
-    Font.Height = -12
+    Font.Color = clWhite
+    Font.Height = -16
     Font.Name = 'Consolas'
     Font.Style = []
-    LabelPosition = lpAbove
-    LabelSpacing = 3
     ParentFont = False
-    ReadOnly = True
     TabOrder = 7
   end
-  object G4: TButton
-    Left = 376
-    Top = 304
-    Width = 65
-    Height = 25
-    Caption = 'Probar'
+  object L9: TEdit
+    Left = 256
+    Top = 232
+    Width = 161
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 8
-    OnClick = B2Click
   end
-  object P1: TPanel
-    Left = 224
-    Top = 352
-    Width = 217
-    Height = 41
-    Caption = 'WIP'
-    Color = clBackground
+  object L10: TEdit
+    Left = 32
+    Top = 304
+    Width = 161
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 9
+  end
+  object L11: TEdit
+    Left = 256
+    Top = 304
+    Width = 161
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 10
   end
 end

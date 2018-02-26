@@ -41,15 +41,22 @@ void __fastcall TbitsF5::B3Click(TObject *Sender)
     char *z;
 
     RGB = strtol(E1->Text.c_str(), &z, 2);
-
-    B=RGB&0x1F;
     R=RGB&0x7C00;
     G=RGB&0x3E0;
+    B=RGB&0x1F;
 
-	L10->Caption =AnsiString(bitset<16>(R).to_string<char,char_traits<char>,allocator<char> >().c_str());
-    L8->Caption =AnsiString(bitset<16>(G).to_string<char,char_traits<char>,allocator<char> >().c_str());
-    L9->Caption =AnsiString(bitset<16>(B).to_string<char,char_traits<char>,allocator<char> >().c_str());
+    L9->Text=AnsiString(bitset<16>(R).to_string<char,char_traits<char>,allocator<char> >().c_str());
+    R>>=10;
+    L9->Color=(TColor)RGB(R*255/31,0,0);
 
+    L8->Text=AnsiString(bitset<16>(G).to_string<char,char_traits<char>,allocator<char> >().c_str());
+    G>>=5;
+    L8->Color=(TColor)RGB(0/31,G*255/31,0);
+
+    L10->Text=AnsiString(bitset<16>(B).to_string<char,char_traits<char>,allocator<char> >().c_str());
+    L10->Color=(TColor)RGB(0,0,B*255/31);
+
+    L11->Color=(TColor)RGB(R*255/31,G*255/31,B*255/31);
 }
 //---------------------------------------------------------------------------
 
