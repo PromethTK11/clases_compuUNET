@@ -154,6 +154,41 @@ object Form2: TForm2
   OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 72
+    Width = 29
+    Height = 13
+    Caption = 'HOLA'
+  end
+  object SG1: TStringGrid
+    Left = 0
+    Top = 0
+    Width = 180
+    Height = 180
+    Hint = 'Hello!'
+    ColCount = 3
+    DefaultColWidth = 60
+    DefaultRowHeight = 60
+    DefaultDrawing = False
+    FixedCols = 0
+    RowCount = 3
+    FixedRows = 0
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Lucida Console'
+    Font.Style = []
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
+    ParentFont = False
+    ParentShowHint = False
+    ScrollBars = ssNone
+    ShowHint = True
+    TabOrder = 1
+    OnDrawCell = SG1DrawCell
+    OnKeyPress = SG1KeyPress
+    OnSelectCell = SG1SelectCell
+  end
   object P1: TPanel
     Left = 179
     Top = 0
@@ -233,34 +268,6 @@ object Form2: TForm2
       TabOrder = 4
       OnClick = B5Click
     end
-  end
-  object SG1: TStringGrid
-    Left = 0
-    Top = 0
-    Width = 180
-    Height = 180
-    Hint = 'Hello!'
-    ColCount = 3
-    DefaultColWidth = 60
-    DefaultRowHeight = 60
-    DefaultDrawing = False
-    FixedCols = 0
-    RowCount = 3
-    FixedRows = 0
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Lucida Console'
-    Font.Style = []
-    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
-    ParentFont = False
-    ParentShowHint = False
-    ScrollBars = ssNone
-    ShowHint = True
-    TabOrder = 1
-    OnDrawCell = SG1DrawCell
-    OnKeyPress = SG1KeyPress
-    OnSelectCell = SG1SelectCell
   end
   object Timer1: TTimer
     Enabled = False

@@ -24,7 +24,7 @@ __fastcall TForm2::TForm2(TComponent* Owner)
 //Source: Una revista del 2002 de BCB
 
 void __fastcall SaveCells(TStringGrid* StringGrid,const AnsiString& FileName)
-{                                      \
+{
 	std::auto_ptr<TStrings> SaveStrings(new TStringList()); //Crea un StringList temporal
 	const int col_count = StringGrid->ColCount;
 
@@ -229,6 +229,41 @@ void __fastcall TForm2::FormActivate(TObject *Sender)
         info >> (int)m;
         info.close();
         Form1->cargar=false;
+    }
+
+    for(int k=0;k<Form1->cantAgrup;k++)
+    {
+        char labeled='N';
+        for(int i=0;i<Form1->nivel;i++)
+        {
+            for(int j=0;j<Form1->nivel;j++)
+            {
+                if((k+1)==Form1->agrup[j][i]&&labeled=='N')
+                {
+                    labeled='S';
+                    TLabel* pista = new TLabel(this);
+                    pista->Parent = SG1;
+                    pista->Caption=AnsiString(Form1->results[(Form1->agrup[j][i])-1]);
+                    if(Form1->sqAgrup[(Form1->agrup[j][i])-1] > 1)
+        	            pista->Caption=pista->Caption+" "+ AnsiString(Form1->operations[(Form1->agrup[j][i])-1]);
+                    pista->AutoSize=false;
+                    pista->Font->Size=8;
+                    //pista->Color=clWhite;
+                    //pista->Font->Color=clBlack;
+                    pista->Width=50;
+                    pista->Height=10;
+                    pista->Visible=true;
+                    pista->Top=i*60+5+i;
+                    pista->Left=j*60+j+10;
+                    pista->Color = TColor(Form1->colors[k]);
+                                    if(Form1->colors[k]<0x5fffff)
+                                        pista->Font->Color = clWhite;
+                                    else
+					                    pista->Font->Color = clBlack;
+
+                }
+            }
+        }
     }
 }
 //---------------------------------------------------------------------------

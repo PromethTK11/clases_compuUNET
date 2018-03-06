@@ -22,6 +22,7 @@ __published:	// IDE-managed Components
 	TButton *B3;
 	TButton *B4;
 	TButton *B5;
+    TLabel *Label1;
  /*	void __fastcall DG1DrawCell(TObject *Sender, int ACol, int ARow,
           TRect &Rect, TGridDrawState State); */
 	void __fastcall SG1SelectCell(TObject *Sender, int ACol, int ARow,
@@ -42,6 +43,7 @@ private:	// User declarations
 public:
 	int x,y,check,m,s;
         bool fl1;	// User declarations
+    char labeled;
     __fastcall TForm2(TComponent* Owner);
 };
 //---------------------------------------------------------------------------

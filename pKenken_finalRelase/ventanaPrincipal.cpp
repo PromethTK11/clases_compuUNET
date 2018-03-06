@@ -169,9 +169,9 @@ void __fastcall TForm1::T11Click(TObject *Sender)
         }
     }
 
-    for(int i=0;i<9;i++) //Conversion de agrup a matriz de ceros
+    for(int i=0;i<nivel;i++) //Conversion de agrup a matriz de ceros
     {
-        for(int j=0;j<9;j++)
+        for(int j=0;j<nivel;j++)
         {
             agrup[i][j]=0;
         }
@@ -440,6 +440,12 @@ void __fastcall TForm1::T12Click(TObject *Sender)
         }
     }
 
+
+
+    /*SG1->Hint=AnsiString(Form1->results[(Form1->agrup[x][y])-1]);
+	if(Form1->sqAgrup[(Form1->agrup[x][y])-1] > 1)
+        	SG1->Hint=SG1->Hint +" "+ AnsiString(Form1->operations[(Form1->agrup[x][y])-1]);
+    */
     cargar=true;
     game->ShowModal();
     delete game;

@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 338
-  Top = 100
+  Left = 422
+  Top = 185
   AutoScroll = False
   Caption = 'Ken Ken: El Juego'
   ClientHeight = 347
